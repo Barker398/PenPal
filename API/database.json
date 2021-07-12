@@ -1,0 +1,14 @@
+//
+{
+    "authors":[],
+    "letters": [
+        {
+            "author": "",
+            "recipient": "",
+            "emailAddress": "",
+            "topics": "" 
+        }
+    ],
+    "topics": [],
+    "recipients": []
+}
