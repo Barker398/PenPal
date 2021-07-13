@@ -7,8 +7,7 @@ export const letterForm = () => {
       <section class="letterList">
       ${letterList()}
       </section>
-      <button class="button" id="sendLetter">Send</button>
-      
+      <h2>Letters saved</h2>
 
     `
 

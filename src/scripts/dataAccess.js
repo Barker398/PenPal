@@ -7,9 +7,6 @@ const applicationState = {
 
 const mainContainer = document.querySelector('#container')
 
-//Post new letters
-
-
 export const getLetters = () => {
     return applicationState.letters.map(letter => ({...letter}))
 }
@@ -20,6 +17,8 @@ export const fetchLetters = () => {
          headers: {
             "Content-Type": "application/json",
         },
+
+//converts the javascript object into json
         body: JSON.stringify(letter)
     }
 

@@ -17,27 +17,23 @@ export const letterList= () => {
       <div class="field">
       <section class=:"Letter">
       <h2>Letter</h2>
-      <input type="text" id="textarea" name="letter" class="input" />
+      <textarea id="textarea" name="letter" class="input"></textarea>
       </section>
       </div>
 
       <div class="field>
-      <section class="Topics">
-      <h2>Topic</h2>
+      <label class="label" for="Topics">Topics</label>
+      <div id="topics" class="letterTopics">
+      <input type="radio" name="topic" value="Business">Business</input>
+      
+      <input type="radio" name="topic" value="Family">Family</input>
+      
+      <input type="radio" name="topic" value="Congratulations">Congratulations</input>
+      
+      <input type="radio" name="topic" value="Condolences">Condolences</input>
+      
 
-      <input type="checkbox" value="Business">
-      <option value="Business">business<option/>
-
-      <input type="checkbox" value="Family">
-      <option value="Family">family<option/>
-
-      <input type="checkbox" value="Congratulations>
-      <option value="Congratulations">congratulations<option/>
-     
-      <input type="checkbox" value="Condolences">
-      <opption value="Condolences">condolences<options/>
-
-      </section>
+        </div>
       </div>
 
       <div class="field">
@@ -49,6 +45,7 @@ export const letterList= () => {
       <option value="Danny Barker">Danny Barker</option>
       </select>
       </section>
+      <button class="button" id="sendLetter">Send</button>
       </div>
       `
       return html
