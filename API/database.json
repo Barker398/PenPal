@@ -1,14 +1,22 @@
-
 {
-    "authors":[],
-    "letters": [
-        {
-            "author": "",
-            "recipient": "",
-            "emailAddress": "",
-            "topics": "" 
-        }
-    ],
-    "topics": [],
-    "recipients": []
+  "authors": [],
+  "letters": [
+    {
+      "author": "",
+      "letterDescription": "asdffsda",
+      "recipient": "",
+      "emailAddress": "",
+      "topics": "",
+      "id": 1
+    },
+    {
+      "Author": "Faith",
+      "letter": "hello",
+      "Topic": "Condolences",
+      "Recipient": "Melody Barker",
+      "id": 2
+    }
+  ],
+  "topics": [],
+  "recipients": []
 }

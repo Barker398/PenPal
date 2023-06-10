@@ -1,8 +1,5 @@
-import { getLetters } from "./dataAccess.js"
+import { sendRequest } from "./dataAccess.js"
 
-const mainContainer = document.querySelector("#container")
-
-mainContainer.addEventListener
 export const letterList= () => {
     const html = `
         <div class="field">
@@ -13,6 +10,7 @@ export const letterList= () => {
              <option value="Faith">Faith Magras</option>
              </select>
 
+             
       
       <div class="field">
       <section class=:"Letter">
@@ -39,7 +37,7 @@ export const letterList= () => {
       <div class="field">
       <section class="Recipients">
       <label class="label">Recipient</label>
-      <select id="recipient" class="select">
+      <select name="Recipient" class="select">
       <option value="Joey Knight">Joey Knight</option>
       <option value="Melody Barker">Melody Barker</option>
       <option value="Danny Barker">Danny Barker</option>
@@ -51,3 +49,27 @@ export const letterList= () => {
       return html
 }
 
+const mainContainer = document.querySelector("#container")
+
+ mainContainer.addEventListener("click", clickEvent => {
+     if (clickEvent.target.id === "sendLetter") {
+         
+         // Get what the user typed into the form fields
+         const letterAuthor = document.querySelector("select[id='Author']").value
+         const letterInput = document.querySelector("textarea[name='letter']").value
+         const letterTopic = document.querySelector('input[name="topic"]:checked').value
+         const letterRecipient = document.querySelector("select[name='Recipient']").value
+
+         // Make an object out of the user input
+         const dataToSendToAPI = {
+             Author: letterAuthor,
+             letter: letterInput,
+             Topic: letterTopic,
+             Recipient: letterRecipient
+         }
+         // Send the data to the API for permanent storage
+         sendRequest(dataToSendToAPI)
+        }
+   
+    }
+ )
