@@ -1,6 +1,6 @@
 import { sendRequest } from "./dataAccess.js"
 
-export const letterList= () => {
+export const letterList = () => {
     const html = `
         <div class="field">
             <label class="label">Author</label>
@@ -46,30 +46,30 @@ export const letterList= () => {
       <button class="button" id="sendLetter">Send</button>
       </div>
       `
-      return html
+    return html
 }
 
 const mainContainer = document.querySelector("#container")
 
- mainContainer.addEventListener("click", clickEvent => {
-     if (clickEvent.target.id === "sendLetter") {
-         
-         // Get what the user typed into the form fields
-         const letterAuthor = document.querySelector("select[id='Author']").value
-         const letterInput = document.querySelector("textarea[name='letter']").value
-         const letterTopic = document.querySelector('input[name="topic"]:checked').value
-         const letterRecipient = document.querySelector("select[name='Recipient']").value
+mainContainer.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "sendLetter") {
 
-         // Make an object out of the user input
-         const dataToSendToAPI = {
-             Author: letterAuthor,
-             letter: letterInput,
-             Topic: letterTopic,
-             Recipient: letterRecipient
-         }
-         // Send the data to the API for permanent storage
-         sendRequest(dataToSendToAPI)
+        // Get what the user typed into the form fields
+        const letterAuthor = document.querySelector("select[id='Author']").value
+        const letterInput = document.querySelector("textarea[name='letter']").value
+        const letterTopic = document.querySelector('input[name="topic"]:checked').value
+        const letterRecipient = document.querySelector("select[name='Recipient']").value
+
+        // Make an object out of the user input
+        const dataToSendToAPI = {
+            Author: letterAuthor,
+            letter: letterInput,
+            Topic: letterTopic,
+            Recipient: letterRecipient
         }
-   
+        // Send the data to the API for permanent storage
+        sendRequest(dataToSendToAPI)
     }
- )
+
+}
+)

@@ -8,7 +8,7 @@ const mainContainer = document.querySelector("#container")
 const render = () => {
   fetchLetters().then(
     () => {
-       mainContainer.innerHTML = letterForm()
+      mainContainer.innerHTML = letterForm()
     }
   )
 }

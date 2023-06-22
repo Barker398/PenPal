@@ -9,8 +9,7 @@ export const letters = (letter) => {
 
     let html = '<ul>'
 
-    html += letters.map(letter =>{
-        debugger
+    html += letters.map(letter => {
         return `<li> ${letter.authorName} ${letter.recipientName} ${letter.topic}</li>`
 
     }
